@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://home4sport-4e1aaacb.zappy5.app/sitemap.xml
+Sitemap: https://home4sport-snif-merkaz.zappy5.app/sitemap.xml
