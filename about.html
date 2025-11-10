@@ -1,0 +1,589 @@
+<!DOCTYPE html><html lang="he" dir="rtl"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="אודות home4sport - סניף מרכז: המפיץ הבלעדי של מדרסי ScanandSole בישראל. מעבדת ריצה מקצועית עם ניתוח ביומכני לרצים במרכז.">
+<meta name="keywords" content="ניתוח ביומכני לרצים במרכז, מעבדת ריצה מקצועית, התאמת נעלי ריצה אישית, מדרסים לספורטאים ScanandSole">
+<title>אודות המעבדה המקצועית שלנו — home4sport - סניף מרכז</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="assets/favicon-48x48.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/favicon-512x512.png">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<style>
+/* Zappy Attribution Header Styles */
+.zappy-header {
+  position: static;
+  width: 100%;
+  background: white;
+  box-shadow: 0px 4px 19px 0px rgba(0,0,0,0.04);
+  padding: 16px 10px;
+  text-align: center;
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  color: #4a4a4a;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 21px;
+}
+
+    .zappy-header p {
+      margin: 0;
+      padding: 0;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 21px;
+      white-space: nowrap;
+      display: inline-block;
+      vertical-align: baseline;
+      margin-bottom: 0 !important;
+    }
+
+.zappy-header .zappy-link {
+  font-weight: 700;
+  color: #4a4a4a;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.zappy-header .zappy-link:hover {
+  opacity: 0.7;
+}</style>
+    <!-- Cookie Consent -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.umd.js"></script>
+    <!-- Mickidum Accessibility Toolbar -->
+    <script src="https://cdn.jsdelivr.net/gh/mickidum/acc_toolbar/acctoolbar/acctoolbar.min.js"></script>
+<!-- Zappy Analytics -->
+<script>
+(function() {
+  'use strict';
+  
+  // Configuration
+  var config = {
+    websiteId: '4e1aaacb-14ff-4a5c-88e8-6de5186c0794',
+    apiUrl: 'https://api.zappy5.com/api/analytics/track',
+    sessionDuration: 30 * 60 * 1000, // 30 minutes
+    visitorDuration: 30 * 24 * 60 * 60 * 1000, // 30 days
+    trackPageViews: true,
+    trackClicks: true,
+    trackFormSubmissions: true
+  };
+  
+  // Generate or retrieve persistent visitor ID (30 days)
+  function getVisitorId() {
+    var visitorKey = 'zappy_visitor_' + config.websiteId;
+    var visitor = null;
+    
+    try {
+      visitor = localStorage.getItem(visitorKey);
+      if (visitor) {
+        var visitorData = JSON.parse(visitor);
+        var now = Date.now();
+        
+        // Check if visitor ID is still valid (30 days)
+        if (now - visitorData.created < config.visitorDuration) {
+          // Update last seen timestamp
+          visitorData.lastSeen = now;
+          localStorage.setItem(visitorKey, JSON.stringify(visitorData));
+          return visitorData.id;
+        }
+      }
+    } catch (e) {
+      console.warn('Zappy Analytics: LocalStorage not available');
+    }
+    
+    // Generate new visitor ID
+    var newVisitorId = 'zv_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+    
+    try {
+      localStorage.setItem(visitorKey, JSON.stringify({
+        id: newVisitorId,
+        created: Date.now(),
+        lastSeen: Date.now()
+      }));
+    } catch (e) {
+      // Continue without local storage
+    }
+    
+    return newVisitorId;
+  }
+  
+  // Generate or retrieve session ID (30 minutes)
+  function getSessionId() {
+    var sessionKey = 'zappy_session_' + config.websiteId;
+    var session = null;
+    
+    try {
+      session = sessionStorage.getItem(sessionKey);
+      if (session) {
+        var sessionData = JSON.parse(session);
+        var now = Date.now();
+        
+        // Check if session is still valid
+        if (now - sessionData.timestamp < config.sessionDuration) {
+          // Update timestamp
+          sessionData.timestamp = now;
+          sessionStorage.setItem(sessionKey, JSON.stringify(sessionData));
+          return sessionData.id;
+        }
+      }
+    } catch (e) {
+      console.warn('Zappy Analytics: SessionStorage not available');
+    }
+    
+    // Generate new session ID
+    var newSessionId = 'zs_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+    
+    try {
+      sessionStorage.setItem(sessionKey, JSON.stringify({
+        id: newSessionId,
+        timestamp: Date.now()
+      }));
+    } catch (e) {
+      // Continue without session storage
+    }
+    
+    return newSessionId;
+  }
+  
+  var visitorId = getVisitorId();
+  var sessionId = getSessionId();
+  
+  // Track an event
+  function trackEvent(eventType, data) {
+    data = data || {};
+    
+    var eventData = {
+      website_id: config.websiteId,
+      event_type: eventType,
+      page_path: window.location.pathname,
+      referrer: document.referrer || 'direct',
+      visitor_id: visitorId,
+      session_id: sessionId,
+      metadata: data
+    };
+    
+    // Use sendBeacon if available (better for page unload events)
+    if (navigator.sendBeacon) {
+      var blob = new Blob([JSON.stringify(eventData)], { type: 'application/json' });
+      navigator.sendBeacon(config.apiUrl, blob);
+    } else {
+      // Fallback to fetch
+      fetch(config.apiUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(eventData),
+        keepalive: true
+      }).catch(function(error) {
+        console.warn('Zappy Analytics: Failed to track event', error);
+      });
+    }
+  }
+  
+  // Track page view
+  if (config.trackPageViews) {
+    trackEvent('pageview', {
+      title: document.title,
+      url: window.location.href
+    });
+  }
+  
+  // Track clicks on important elements
+  if (config.trackClicks) {
+    document.addEventListener('click', function(e) {
+      var target = e.target;
+      
+      // Track button clicks (counted as actions)
+      if (target.tagName === 'BUTTON' || target.closest('button')) {
+        var button = target.tagName === 'BUTTON' ? target : target.closest('button');
+        trackEvent('click', {
+          element: 'button',
+          text: button.textContent.trim().substring(0, 100),
+          id: button.id || null,
+          class: button.className || null
+        });
+      }
+      
+      // Track link clicks (navigation - not counted as actions)
+      else if (target.tagName === 'A' || target.closest('a')) {
+        var link = target.tagName === 'A' ? target : target.closest('a');
+        trackEvent('navigation', {
+          element: 'link',
+          text: link.textContent.trim().substring(0, 100),
+          href: link.href,
+          external: link.hostname !== window.location.hostname
+        });
+      }
+    }, true);
+  }
+  
+  // Track form submissions
+  if (config.trackFormSubmissions) {
+    document.addEventListener('submit', function(e) {
+      var form = e.target;
+      
+      trackEvent('form_submit', {
+        form_id: form.id || null,
+        form_name: form.name || null,
+        form_action: form.action || null,
+        form_method: form.method || 'GET'
+      });
+    }, true);
+  }
+  
+  // Track time on page (send on page unload)
+  var pageLoadTime = Date.now();
+  
+  window.addEventListener('beforeunload', function() {
+    var timeOnPage = Math.floor((Date.now() - pageLoadTime) / 1000); // in seconds
+    
+    trackEvent('page_unload', {
+      time_on_page: timeOnPage,
+      page_path: window.location.pathname
+    });
+  });
+  
+  // Expose tracking function globally for custom events
+  window.zappyAnalytics = {
+    track: trackEvent,
+    getVisitorId: function() { return visitorId; },
+    getSessionId: function() { return sessionId; }
+  };
+  
+})();
+</script>
+<!-- End Zappy Analytics -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Zappy Attribution Header -->
+<div id="zappy-attribution-header" class="zappy-header" style="display: none;">
+  <p>Happily created by&nbsp;<a href="https://zappy5.com" target="_blank" rel="noopener noreferrer" class="zappy-link">Zappy</a></p>
+</div>
+
+<nav class="navbar" id="navbar">
+  <div class="container nav-container">
+    <div class="nav-brand">
+      <a href="/" class="logo-link">
+        <img src="assets/home4sport-logo.webp" alt="home4sport - סניף מרכז" class="logo" />
+      </a>
+    </div>
+    
+    <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+      <svg class="hamburger-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+      </svg>
+      <svg class="close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" style="display: none;">
+        <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+      </svg>
+    </button>
+    
+    <button class="phone-header-btn" aria-label="התקשר אלינו">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+      </svg>
+    </button>
+    
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="/services">שירותים</a></li>
+      <li><a href="/about" class="active">אודות</a></li>
+    </ul>
+    
+    <div class="nav-cta-container">
+      <li class="nav-cta-item">
+        <a href="/contact" class="nav-cta-btn">צור קשר</a>
+      </li>
+    </div>
+  </div>
+</nav>
+
+<section class="page-header">
+  <div class="container">
+    <h1>אודות בית לספורטאים</h1>
+    <h3>מובילים את תחום ניתוח הביומכני והתאמת הציוד לספורטאים בישראל</h3>
+  </div>
+</section>
+
+<section class="story-section">
+  <div class="container">
+    <div class="story-content">
+      <h2>הסיפור שלנו</h2>
+      <p>בית לספורטאים הוקם מתוך תשוקה עמוקה לספורט ורצון לעזור לספורטאים להגיע לפוטנציאל המלא שלהם. אנחנו מאמינים שכל רץ, בין אם הוא מתחיל או מקצוען, ראוי לקבל את הכלים והידע הטובים ביותר כדי לשפר את הביצועים ולמנוע פציעות.</p>
+      <p>המסע שלנו התחיל כאשר גילינו את הפער הקיים בישראל בתחום ניתוח ביומכני לרצים במרכז והתאמת ציוד מקצועי. ראינו יותר מדי ספורטאים שסובלים מפציעות שניתן היה למנוע, ויותר מדי רצים שלא מממשים את הפוטנציאל שלהם בגלל ציוד לא מתאים או טכניקה לא נכונה.</p>
+      <p>היום, אנחנו גאים להיות המפיץ הבלעדי בישראל של מדרסי ScanandSole, הטכנולוגיה המובילה בעולם בתחום התאמת מדרסים. מעבדת הריצה המקצועית שלנו מצוידת בציוד המתקדם ביותר, והצוות שלנו כולל מומחים מנוסים בתחומי הביומכניקה, הפיזיותרפיה והאימון הספורטיבי.</p>
+    </div>
+  </div>
+</section>
+
+<section class="mission-section">
+  <div class="container">
+    <div class="split-content">
+      <div class="split-image">
+        <img data-placeholder="service-10" data-context="Modern sports biomechanics facility interior with professional equipment, consultation area, and team of experts working with athletes" src="assets/home4sport-service-service-10.webp" alt="מתקן ביומכניקה מודרני" class="mission-img">
+      </div>
+      <div class="split-text">
+        <h2>המשימה שלנו</h2>
+        <p>המשימה שלנו פשוטה וברורה: לעזור לכל ספורטאי להגיע לרמה הבאה באמצעות ניתוח מדויק, התאמה אישית וליווי מקצועי. אנחנו מאמינים שהשילוב של טכנולוגיה מתקדמת, מומחיות רפואית וניסיון ספורטיבי יוצר את הפתרון המושלם לכל רץ.</p>
+        <p>אנחנו שואפים להיות לא רק ספק שירותים, אלא שותפים אמיתיים למסע הספורטיבי שלכם. כל לקוח שלנו מקבל יחס אישי, תשומת לב מלאה והתאמה מדויקת לצרכים הייחודיים שלו.</p>
+        <ul class="mission-values">
+          <li><i class="fas fa-check-circle"></i> מצוינות מקצועית ללא פשרות</li>
+          <li><i class="fas fa-check-circle"></i> טכנולוגיה מתקדמת ומוכחת</li>
+          <li><i class="fas fa-check-circle"></i> יחס אישי ומסור לכל לקוח</li>
+          <li><i class="fas fa-check-circle"></i> שיפור מתמיד וחדשנות</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="technology-section">
+  <div class="container">
+    <h2>הטכנולוגיה שלנו</h2>
+    <div class="technology-content">
+      <p>בית לספורטאים משקיע בטכנולוגיה המתקדמת ביותר כדי לספק לכם את השירות הטוב ביותר. מעבדת הריצה המקצועית שלנו כוללת:</p>
+      <div class="tech-features">
+        <div class="tech-feature">
+          <div class="tech-icon">
+            <i class="fas fa-video"></i>
+          </div>
+          <h3>מצלמות מהירות</h3>
+          <p>צילום במהירות גבוהה לניתוח מפורט של טכניקת הריצה והליכה, זיהוי דפוסי תנועה ונקודות לשיפור.</p>
+        </div>
+        
+        <div class="tech-feature">
+          <div class="tech-icon">
+            <i class="fas fa-weight"></i>
+          </div>
+          <h3>לוחות כוח</h3>
+          <p>מדידה מדויקת של כוח הפגיעה, זמן מגע עם הקרקע והתפלגות משקל לאורך המחזור הריצה.</p>
+        </div>
+        
+        <div class="tech-feature">
+          <div class="tech-icon">
+            <i class="fas fa-cube"></i>
+          </div>
+          <h3>ניתוח תלת-מימדי</h3>
+          <p>מערכת מתקדמת לניתוח תנועה תלת-מימדי המספקת תמונה מלאה של הביומכניקה של הריצה.</p>
+        </div>
+        
+        <div class="tech-feature">
+          <div class="tech-icon">
+            <i class="fas fa-scanner"></i>
+          </div>
+          <h3>סריקת ScanandSole</h3>
+          <p>טכנולוגיית סריקה ייחודית ללא מגע המייצרת מדרסים מותאמים אישית בדיוק מקסימלי.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="expertise-section">
+  <div class="container">
+    <h2>המומחיות שלנו</h2>
+    <div class="expertise-grid">
+      <div class="expertise-card">
+        <div class="expertise-icon">
+          <i class="fas fa-user-md"></i>
+        </div>
+        <h3>ביומכניקה ספורטיבית</h3>
+        <p>הצוות שלנו כולל מומחים בביומכניקה ספורטיבית עם ניסיון רב בעבודה עם ספורטאים מכל הרמות. אנחנו מבינים את המדע מאחורי תנועת הריצה ויודעים איך להפוך אותו לפתרונות מעשיים.</p>
+      </div>
+      
+      <div class="expertise-card">
+        <div class="expertise-icon">
+          <i class="fas fa-heartbeat"></i>
+        </div>
+        <h3>פיזיותרפיה וטיפול בפציעות</h3>
+        <p>אנחנו עובדים בשיתוף פעולה הדוק עם פיזיותרפיסטים מומחים המתמחים בפציעות ספורט. זה מאפשר לנו לזהות בעיות פוטנציאליות ולספק המלצות למניעת פציעות.</p>
+      </div>
+      
+      <div class="expertise-card">
+        <div class="expertise-icon">
+          <i class="fas fa-running"></i>
+        </div>
+        <h3>אימון ריצה</h3>
+        <p>חברי הצוות שלנו הם רצים פעילים ומאמנים מוסמכים. אנחנו מבינים את האתגרים מניסיון אישי ויכולים לספק ייעוץ מעשי ורלוונטי.</p>
+      </div>
+      
+      <div class="expertise-card">
+        <div class="expertise-icon">
+          <i class="fas fa-shoe-prints"></i>
+        </div>
+        <h3>התאמת ציוד</h3>
+        <p>אנחנו מכירים לעומק את כל המותגים והדגמים בשוק, ויודעים בדיוק איזה ציוד מתאים לכל סוג רץ. ההמלצות שלנו מבוססות על ניתוח מדויק ולא על העדפות אישיות.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="exclusive-section">
+  <div class="container">
+    <div class="exclusive-content">
+      <h2>המפיץ הבלעדי של ScanandSole בישראל</h2>
+      <p>אנחנו גאים להיות המפיץ הבלעדי בישראל של מדרסי ScanandSole, הטכנולוגיה המובילה בעולם בתחום ניתוח ביומכני לרצים במרכז והתאמת מדרסים. ScanandSole היא חברה עולמית המובילה בחדשנות טכנולוגית, ואנחנו הבאנו את הטכנולוגיה הזו לישראל כדי לאפשר לספורטאים הישראלים ליהנות מהפתרון הטוב ביותר בשוק.</p>
+      <p>הטכנולוגיה של ScanandSole משתמשת בסריקה תלת-מימדית מתקדמת שאינה דורשת מגע ידי אדם, ומייצרת מדרסים מותאמים אישית בדיוק מקסימלי. עם 12 סוגים שונים של מדרסים, אנחנו יכולים לספק פתרון מושלם לכל בעיה ולכל סוג כף רגל.</p>
+      <div class="exclusive-benefits">
+        <div class="benefit-item">
+          <i class="fas fa-award"></i>
+          <span>טכנולוגיה עולמית מובילה</span>
+        </div>
+        <div class="benefit-item">
+          <i class="fas fa-certificate"></i>
+          <span>אישורים וסטנדרטים בינלאומיים</span>
+        </div>
+        <div class="benefit-item">
+          <i class="fas fa-users"></i>
+          <span>אלפי ספורטאים מרוצים בעולם</span>
+        </div>
+        <div class="benefit-item">
+          <i class="fas fa-star"></i>
+          <span>תוצאות מוכחות ומדידות</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="commitment-section">
+  <div class="container">
+    <h2>המחויבות שלנו אליכם</h2>
+    <div class="commitment-content">
+      <p>בבית לספורטאים, אנחנו מתחייבים לספק לכם את השירות הטוב ביותר, עם תשומת לב אישית ומקצועיות ללא פשרות. כל לקוח שלנו חשוב לנו, ואנחנו עושים הכל כדי להבטיח שתקבלו את הפתרון המתאים ביותר לצרכים שלכם.</p>
+      <div class="commitment-points">
+        <div class="commitment-point">
+          <h3><i class="fas fa-handshake"></i> יחס אישי</h3>
+          <p>כל לקוח מקבל יחס אישי ומסור, עם זמן מספיק לשאלות, הסברים מפורטים והתאמה מדויקת.</p>
+        </div>
+        <div class="commitment-point">
+          <h3><i class="fas fa-chart-line"></i> מעקב שוטף</h3>
+          <p>אנחנו לא עוזבים אתכם אחרי הרכישה - אנחנו כאן למעקב, התאמות נוספות ותמיכה מתמשכת.</p>
+        </div>
+        <div class="commitment-point">
+          <h3><i class="fas fa-lightbulb"></i> חדשנות מתמדת</h3>
+          <p>אנחנו משקיעים בהכשרה מתמדת, טכנולוגיה חדשה ושיפור השירותים שלנו כל הזמן.</p>
+        </div>
+        <div class="commitment-point">
+          <h3><i class="fas fa-shield-alt"></i> שקיפות מלאה</h3>
+          <p>אנחנו מסבירים בדיוק מה אנחנו עושים, למה, ומה התוצאות הצפויות - ללא הבטחות מופרזות.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="stats-section">
+  <div class="container">
+    <h2>המספרים מדברים בעד עצמם</h2>
+    <div class="stats-grid">
+      <div class="stat-item">
+        <div class="stat-number">1000+</div>
+        <div class="stat-label">ספורטאים מרוצים</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">12</div>
+        <div class="stat-label">סוגי מדרסים שונים</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">95%</div>
+        <div class="stat-label">שיפור בביצועים</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">85%</div>
+        <div class="stat-label">הפחתה בפציעות</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-content">
+      <h2>בואו להכיר אותנו</h2>
+      <p>אנחנו מזמינים אתכם לבקר במעבדת הריצה המקצועית שלנו, לפגוש את הצוות ולחוות בעצמכם את השירות והמקצועיות שלנו. קבעו פגישת ייעוץ ראשונית והתחילו את המסע לשיפור הביצועים.</p>
+      <a href="/contact" class="btn-primary">קבעו פגישה עכשיו</a>
+    </div>
+  </div>
+</section>
+
+<a href="https://wa.me/[whatsapp_handle]" target="_blank" class="whatsapp-float" aria-label="WhatsApp" rel="noopener noreferrer">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+
+    <!-- Legal Footer -->
+    <footer class="legal-footer">
+      <div class="container">
+        <div class="footer-main">
+          <div class="all-rights-reserved">
+            <p>© 2025 home4sport - סניף מרכז. כל הזכויות שמורות.</p>
+          </div>
+          <div class="footer-social"><a href="https://facebook.com/[facebook_handle]" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+<a href="https://instagram.com/[instagram_handle]" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+<a href="https://wa.me/[whatsapp_handle]" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a></div>
+          <div class="footer-legal">
+            <a href="privacy.html" aria-label="מדיניות פרטיות">
+              מדיניות פרטיות
+            </a>
+            <span class="separator">|</span>
+            <a href="accessibility.html" aria-label="נגישות">
+              נגישות
+            </a>
+            <span class="separator">|</span>
+            <a href="terms.html" aria-label="תנאי שימוש">
+              תנאי שימוש
+            </a>
+          </div>
+        </div>
+        <div class="zappy-attribution">
+          <p>נוצר באמצעות <a href="https://zappy5.com" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">Zappy</a></p>
+        </div>
+      </div>
+    </footer>
+
+
+
+<!-- Zappy Attribution Header Script -->
+<script>
+(function() {
+  var websiteId = '4e1aaacb-14ff-4a5c-88e8-6de5186c0794';
+  
+  // Don't show header in preview mode
+  var currentUrl = window.location.href;
+  var isPreview = currentUrl.includes('/preview/') || 
+                  currentUrl.includes('/preview-fullscreen/') || 
+                  currentUrl.includes('localhost:5001') ||
+                  currentUrl.includes('localhost:3000');
+  
+  if (isPreview) {
+    return; // Exit early in preview mode
+  }
+  
+  fetch('https://api.zappy5.com/api/website/' + websiteId + '/tier')
+    .then(function(response) { return response.json(); })
+    .then(function(data) {
+      if (data.showAttribution) {
+        var header = document.getElementById('zappy-attribution-header');
+        if (header) {
+          header.style.display = 'block';
+        }
+      }
+    })
+    .catch(function(error) {
+      console.error('Failed to check tier:', error);
+    });
+})();
+</script>
+    <div data-integration="accessibility:toolbar"></div>
+    <script src="script.js"></script>
+</body></html>
